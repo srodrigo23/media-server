@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    title Media-Server
+    link(href="./styles/style.css", rel="stylesheet")
+  body
+    h1.text-blue-600.text-5xl.text-center.p-5 Media Server
+    p.text-red-600.text-2xl.text-center Upload Mp3 Files
+    form.flex.justify-center(action="post")
+        div.border-solid.border-2.border-blue-100.p-2.m-5.rounded-lg.text-center.inline-block
+            input#uploadfile(type="file", name="Upload a file")
+            button.bg-blue-200.rounded.m-2.p-2.rounded-lg(type="submit") Upload
