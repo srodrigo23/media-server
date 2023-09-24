@@ -9,7 +9,7 @@ html(lang="en")
   body
     h1.text-blue-600.text-5xl.text-center.p-5 Media Server
     p.text-red-600.text-2xl.text-center Upload Mp3 Files
-    form.flex.justify-center(action="post")
+    form.flex.justify-center(method="post" )
         div.border-solid.border-2.border-blue-100.p-2.m-5.rounded-lg.text-center.inline-block
             input#uploadfile(type="file", name="Upload a file")
             button.bg-blue-200.rounded.m-2.p-2.rounded-lg(type="submit") Upload
