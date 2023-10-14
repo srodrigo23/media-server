@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-    res.render('index');
+  res.render('index');
 });
 
 const uploadMiddleware = require('./middlewares/upload');
@@ -27,9 +27,11 @@ app.post('/upload', uploadMiddleware, (req, res)=>{
         return res.status(500).json({ error: 'Failed to store the file' });
       }
     });
+    res.render('index', { fileName:file.path });
   });
   // Send an appropriate response to the client
-  res.status(200).json({ message: 'File upload successful' });
+  // res.status(200).json({ message: 'File upload successful' });
+  
 })
 
 app.listen(3000, function () {

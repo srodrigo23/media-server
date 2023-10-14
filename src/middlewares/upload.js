@@ -21,7 +21,6 @@ const uploadMiddleware = (req, res, next) => {
     //Use multer upload instance
     upload.array('files', 5)(req, res, (err) => {
         if (err) {
-            console.log(err)
             return res.status(400).json({ error: err.message });
         }
         // Retrieve uploaded files
