@@ -28,7 +28,11 @@ app.post('/upload', uploadMiddleware, (req, res)=>{
       }
     });
     res.render('index', { fileName:file.path });
+    next()
   });
+  // res.render('index', { fileName:file.path });
+  res.redirect('/');
+  // next();
   // Send an appropriate response to the client
   // res.status(200).json({ message: 'File upload successful' });
   
