@@ -7,18 +7,16 @@ html(lang="en")
     title Media-Server
     link(href="./styles/style.css", rel="stylesheet")
   body
-    include includes/header.pug 
-    //- h1.text-blue-600.text-5xl.text-center.p-5 Media Server
-    //- p.text-red-600.text-2xl.text-center Upload Mp3 Files
-
-    div.flex.items-center.justify-center.pt-5
-      form(method="POST" action="/upload" enctype="multipart/form-data")
-          div.border-solid.border-2.border-blue-100.pl-5.pr-5.pt-3.pb-3.m-5.rounded-lg.text-center.inline-block.shadow-lg.bg-green-10
-              input#uploadfile(type="file" name="files" required=true)
-              button.bg-blue-200.rounded.m-2.p-2.rounded-lg.shadow-lg(type="submit") Upload
+    div
+      include includes/header.pug 
     
-    //- div.max-h-full.bg-yellow-50
-    //-   h1 siki
-    div.bg-green-50
-      h1=fileName
-    include includes/footer.pug
+      div.flex.items-center.justify-center.pt-5
+        form(method="POST" action="/upload" enctype="multipart/form-data")
+          div.border-solid.border-2.border-blue-100.pl-5.pr-5.pt-3.pb-3.m-5.rounded-lg.text-center.inline-block.shadow-lg.bg-green-10
+            input#uploadfile(type="file" name="files" required=true)
+            button.bg-blue-200.rounded.m-2.p-2.rounded-lg.shadow-lg(type="submit") Upload
+      
+      div.bg-green-50
+        h1=fileName
+
+      include includes/footer.pug
