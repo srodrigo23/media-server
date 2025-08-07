@@ -1,0 +1,22 @@
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+        title MediaServer
+        link(href="./styles/style.css", rel="stylesheet")
+    body
+        div.border.rounded-xl
+            form(method='POST' action='/login')
+                h1.text-2xl.text-center Sistema de Gestion Multimedia
+                div
+                    label(for='username') Nombre de usuario:
+                    input.border(type='text', name='username', required)
+                    br
+                    label(for='password') Contrasenia:
+                    input.border(type='password', name='password', required)
+                br
+                button.rounded-xl.p-2.bg-blue-500.text-white.cursor-pointer.px-5.my-5(type='submit') Entrar al Sistema
+                
+                if error
+                    p.text-red-900=error

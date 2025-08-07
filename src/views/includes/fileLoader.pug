@@ -1,7 +1,9 @@
 
 
-div.flex.items-center.justify-center.pt-5
+div.flex.items-center.justify-center
   form(method="POST" action="/upload" enctype="multipart/form-data")
-    div.border-solid.border-2.border-blue-100.pl-5.pr-5.pt-3.pb-3.m-5.rounded-lg.text-center.inline-block.shadow-lg.bg-green-10
+    div.border-solid.pl-5.pr-5.pt-3.pb-3.m-5.rounded-lg.text-center.inline-block
+      
       input#uploadfile(type="file" name="files" required=true)
-      button.bg-blue-200.rounded.m-2.p-2.rounded-lg.shadow-lg(type="submit") Upload
+      
+  button.bg-blue-200.rounded.p-2.rounded-lg.shadow-lg(type="submit") Upload

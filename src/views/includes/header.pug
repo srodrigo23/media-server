@@ -2,12 +2,16 @@
 
 mixin navbar(pathInfo)
     div.shadow-lg.bg-red-500
-        h1.text-white.text-2xl.text-center.p-5.font-bold
-            a(href="/") Media Server
+        div.flex
+            h1.text-white.text-2xl.text-center.p-5.font-bold
+                a(href="/") Media Server
+            a(href="/logout")  
+                button Cerrar Sesión
+                
         div.flex.items-center.justify-center
             ul  
                 if pathInfo.label == 'music'
-                    li.inline-block.p-5.text-white
+                    li.inline-block.p-5.text-white.underline
                         a(href="/music", rel="noopener noreferrer") Musica
                     li.inline-block.p-5
                         a(href="/images", rel="noopener noreferrer") Images
@@ -16,7 +20,7 @@ mixin navbar(pathInfo)
                 if pathInfo.label == 'image'
                     li.inline-block.p-5
                         a(href="/music", rel="noopener noreferrer") Musica
-                    li.inline-block.p-5.text-white
+                    li.inline-block.p-5.text-white.underline
                         a(href="/images", rel="noopener noreferrer") Images
                     li.inline-block.p-5
                         a(href="/video", rel="noopener noreferrer") Video
@@ -25,5 +29,5 @@ mixin navbar(pathInfo)
                         a(href="/music", rel="noopener noreferrer") Musica
                     li.inline-block.p-5
                         a(href="/images", rel="noopener noreferrer") Images
-                    li.inline-block.p-5.text-white
+                    li.inline-block.p-5.text-white.underline
                         a(href="/video", rel="noopener noreferrer") Video
