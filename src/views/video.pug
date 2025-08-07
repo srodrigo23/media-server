@@ -8,17 +8,8 @@ html(lang="en")
     link(href="./styles/style.css", rel="stylesheet")
   body
   
-    div.shadow-lg
-        h1.text-blue-600.text-2xl.text-center.p-5
-            a(href="/") Media Server
-        div.flex.items-center.justify-center
-            ul
-                li.inline-block.pl-5.pr-5.pb-3
-                    a(href="/music", rel="noopener noreferrer") Music
-                li.inline-block.pl-5.pr-5.pb-3
-                    a(href="/images", rel="noopener noreferrer") Images
-                li.inline-block.pl-5.pr-5.pb-3
-                    a.bg-red-50.pl-5.pr-5.pt-2.pb-2.shadow-lg.rounded-md(href="/video", rel="noopener noreferrer") Video
+    include includes/header.pug
+    +navbar({label})
     
     //- div.flex.items-center.justify-center.pt-5
     //-   form(method="POST" action="/upload" enctype="multipart/form-data")

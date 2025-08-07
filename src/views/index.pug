@@ -4,11 +4,12 @@ html(lang="en")
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
-    title Media-Server
+    title MediaServer
     link(href="./styles/style.css", rel="stylesheet")
   body
     div
-      include includes/header.pug 
+      include includes/header.pug
+      +navbar('root')
     
       div.flex.items-center.justify-center.pt-5
         form(method="POST" action="/upload" enctype="multipart/form-data")

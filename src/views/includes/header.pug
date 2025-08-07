@@ -1,13 +1,29 @@
 
-div.shadow-lg
-    h1.text-blue-600.text-2xl.text-center.p-5
-        a(href="/") Media Server
 
-    div.flex.items-center.justify-center
-        ul
-            li.inline-block.pl-5.pr-5.pb-3
-                a(href="/music", rel="noopener noreferrer") Music
-            li.inline-block.pl-5.pr-5.pb-3
-                a(href="/images", rel="noopener noreferrer") Images
-            li.inline-block.pl-5.pr-5.pb-3
-                a(href="/video", rel="noopener noreferrer") Video
+mixin navbar(pathInfo)
+    div.shadow-lg.bg-red-500
+        h1.text-white.text-2xl.text-center.p-5.font-bold
+            a(href="/") Media Server
+        div.flex.items-center.justify-center
+            ul  
+                if pathInfo.label == 'music'
+                    li.inline-block.p-5.text-white
+                        a(href="/music", rel="noopener noreferrer") Musica
+                    li.inline-block.p-5
+                        a(href="/images", rel="noopener noreferrer") Images
+                    li.inline-block.p-5
+                        a(href="/video", rel="noopener noreferrer") Video
+                if pathInfo.label == 'image'
+                    li.inline-block.p-5
+                        a(href="/music", rel="noopener noreferrer") Musica
+                    li.inline-block.p-5.text-white
+                        a(href="/images", rel="noopener noreferrer") Images
+                    li.inline-block.p-5
+                        a(href="/video", rel="noopener noreferrer") Video
+                if pathInfo.label == 'video'
+                    li.inline-block.p-5
+                        a(href="/music", rel="noopener noreferrer") Musica
+                    li.inline-block.p-5
+                        a(href="/images", rel="noopener noreferrer") Images
+                    li.inline-block.p-5.text-white
+                        a(href="/video", rel="noopener noreferrer") Video

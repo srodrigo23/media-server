@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.redirect('/music');
 });
 
 const uploadMiddleware = require('./middlewares/upload');
@@ -35,19 +35,19 @@ app.post('/upload', uploadMiddleware, (req, res)=>{
   // next();
   // Send an appropriate response to the client
   // res.status(200).json({ message: 'File upload successful' });
-  
 })
 
+
 app.get('/music',(req, res) =>{
-  res.render('music');
+  res.render('music', {'label':'music'});
 });
 
 app.get('/images',(req, res) =>{
-  res.render('images');
+  res.render('images', {'label':'image'});
 });
 
 app.get('/video',(req, res) =>{
-  res.render('video');
+  res.render('video', {'label':'video'});
 });
 
 app.listen(3000, function () {
