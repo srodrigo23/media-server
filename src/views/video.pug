@@ -7,17 +7,7 @@ html(lang="en")
     title Media-Server
     link(href="./styles/style.css", rel="stylesheet")
   body
-  
     include includes/header.pug
     +navbar({label})
-    
-    //- div.flex.items-center.justify-center.pt-5
-    //-   form(method="POST" action="/upload" enctype="multipart/form-data")
-    //-     div.border-solid.border-2.border-blue-100.pl-5.pr-5.pt-3.pb-3.m-5.rounded-lg.text-center.inline-block.shadow-lg.bg-green-10
-    //-       input#uploadfile(type="file" name="files" required=true)
-    //-       button.bg-blue-200.rounded.m-2.p-2.rounded-lg.shadow-lg(type="submit") Upload
-    
-    h1 Video    
-
+    include includes/fileLoader.pug
     include includes/footer.pug
-
